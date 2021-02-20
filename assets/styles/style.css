@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root {
+    --primary-color: #8739f9;
+    --secondary-color: #1c3fa8;
+    --dark-color : #002240;
+    --light-color: #f4f4f4;
+    --grey-color: #f2f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Quicksand' , sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 70%;
+    
+}
+
+
+/* navbar */
+
+.navbar{
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+/* showcase */
+
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+}
+
+.showcase-img {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 300px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+    text-align: center;
+}
+
+.showcase-img img{
+    padding-top: 45px;
+}
+
+/* variasi background */
+.showcase::before,
+.showcase::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px white solid;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+/* stats about */
+
+.about{
+    padding-bottom: 100px;
+}
+.stats {
+    padding-top: 100px;
+    
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;    
+}
+
+.stats h1{
+    font-weight: 500;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.stats h3{
+    font-weight: 300;
+}
+
+/* experiences */
+
+.experience{
+    padding-bottom: 100px;
+}
+
+
+/* education */
+
+.education{
+    padding-bottom: 100px;
+}
+
+.education .foto img{
+    max-width: 40%;
+}
+
+.education h3{
+    font-size: 20px;
+}
+
+
+/* skills */
+
+.languages .flex{
+    flex-wrap: wrap;
+}
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+
+}
+
+
+
+/* footer */
+
+.footer .social a{
+    margin: 0 10px;
+}
+
+.footer .social a:hover{
+    color: var(--primary-color);
+}
+
+
+/* tablet and under */
+
+@media(max-width:768px){
+
+    .grid,
+    .showcase .grid,
+    .stats .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase{
+        height: auto;
+    }
+
+    .stats .foto{
+        justify-self: center;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-img{
+        justify-self: center;
+    }   
+
+    /* mobiles */
+@media(max-width:500px){
+    .navbar{        
+        height: 110px;
+
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
