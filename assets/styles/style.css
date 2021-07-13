@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     box-sizing: border-box;
@@ -56,8 +56,8 @@ img {
     color: #fff;
     height: 70px;
     position: sticky;
-   top: 0;
-   z-index: 100;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar ul {
@@ -177,9 +177,112 @@ img {
 
 /* experiences */
 
-.experience{
-    padding-bottom: 100px;
+.experiences{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+
 }
+
+.experiences-center{
+    justify-content: center;
+}
+
+.experiences-content{
+    margin-bottom: 50px;
+    
+
+}
+.experiences-content .content img{
+    width: 35%;
+    display: block;
+    margin: auto;
+}
+
+#labtiImg{
+    width: 15%;
+}
+
+.experiences-content .content h4{
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+}
+.experiences-content .content h5{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.experiences-content p{
+    padding: 40px;
+}
+
+.experiences-content .content{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
+.btn-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    
+}
+
+.tab-btn:nth-child(1) {
+    border-top-left-radius: 15px;
+}
+
+.tab-btn:nth-child(4) {
+    border-top-right-radius: 15px;
+}
+
+.tab-btn{
+    padding: 1rem 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    display: block;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    transition: all 0.3s linear;
+    color: black;
+    
+}
+
+.tab-btn:not(.active){
+    color: white;
+}
+
+.tab-btn:hover:not(.active){
+    background-color:white;
+    color: black;
+}
+
+/* hide content */
+.content{
+    background-color: white;
+    display: none;
+}
+
+.content.active{
+    display: block;
+}
+
+.tab-btn.active{
+    background-color: white;
+}
+
+
+
+/* .experience{
+    padding-bottom: 100px;
+} */
 
 
 /* education */
@@ -199,6 +302,8 @@ img {
 
 /* skills */
 
+
+
 .languages .flex{
     flex-wrap: wrap;
 }
@@ -207,18 +312,19 @@ img {
     text-align: center;
     margin: 18px 10px 40px;
     transition: transform 0.2s ease-in;
+    cursor: pointer;
 }
 
 .languages .card h4{
     font-size: 20px;
     margin-bottom: 10px;
+    
 }
 
 .languages .card:hover{
     transform: translateY(-15px);
 
 }
-
 
 
 /* footer */
@@ -258,7 +364,8 @@ img {
 
     .showcase-img{
         justify-self: center;
-    }   
+    } 
+}
 
     /* mobiles */
 @media(max-width:500px){
